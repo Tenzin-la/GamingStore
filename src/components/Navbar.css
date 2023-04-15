@@ -1,0 +1,144 @@
+.navbar {
+    display: flex;
+    padding: 40px 0;
+    height: 6rem;
+    font-size: 18px;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+.nav-left {
+    display: flex;
+}
+
+.navbar ul {
+    display: flex;
+    position: relative;
+    list-style: none;
+    padding: 0.5em 0;
+}
+
+.navbar li a {
+    text-decoration: none;
+    margin: 0 22px;
+    color: #96a1a6;
+    transition: 0.1s all ease-in-out 0.05s;
+
+}
+
+.navbar li a:hover
+{
+    color: #333;
+    border-bottom: 3px solid slateblue;
+    
+    
+}
+
+
+
+
+
+
+
+.navbar h1 a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px 0 0;
+
+}
+
+.nav-right {
+    padding: 0.1em 3em;
+    display: flex;
+}
+
+.nav-right button {
+    border: none;
+    padding: 8px;
+    margin: 0 6px;
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+
+.nav-right .wishlist {
+    background-color: gold;
+    height: 3em;
+    width: 3em;
+
+}
+
+.nav-right .cart img {
+    height: 1.5em;
+
+}
+
+.nav-right .cart {
+    background-color: #eeeeee;
+
+
+
+}
+
+.nav-right .profile {
+    height: 4em;
+    width: 4em;
+    background-color: #f8f8f8;
+    margin-right: 20px;
+    position: relative;
+    bottom: 10px;
+
+}
+
+/* .navbar li a:active::after, .navbar li a:hover::after{
+    content: "";
+    width: 7%;
+    height: 2px;
+    background-color:#088178;
+    position: absolute;
+    bottom: -20px;
+    left: 24px;
+} */
+
+
+.navbar .searchbox {
+
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    left: 40%;
+    top: 20%;
+
+}
+
+.searchbox button 
+{
+    border: none;
+    outline: none;
+    background: transparent;
+    position: absolute;
+    right: 0px;
+}
+
+.searchbox .searchbar 
+{
+    border: none;
+    border-bottom: 1px solid grey;
+    font-size: 16px;
+    color: #96a1a6;
+    outline: none;
+    background-color: #eeeeee;
+
+}
+
+.searchbox .searchbar::placeholder
+{
+    color: #96a1a6;
+    
+}
+
+.searchbox button img
+{
+    height: 1.5em;
+}

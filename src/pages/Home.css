@@ -1,0 +1,50 @@
+
+.home .hero 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
+.home .hero  img
+{
+    width: 90%;
+    border-radius: 20px;
+    height: 80%;
+    box-shadow: 10px 10px 20px lightgrey;
+    cursor: pointer;
+    transition: all 0.01s ease-in-out;
+}
+
+.home .hero  img:hover
+{
+    box-shadow: 10px 10px 10px 20px #fff;
+}
+
+.home .top-trending .heading
+{
+    font-size: 20px;
+    font-weight:600;
+    margin: 0 0 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px 0 0;
+    color: #334;
+}
+
+.home .top-trending .heading big
+{
+    cursor: pointer;
+}
+
+.home .top-trending .heading big:hover
+{
+    color: #555;
+}
+
+.home .top-trending .heading .right img 
+{
+    height: 20px;
+}
+
