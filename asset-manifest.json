@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/GamingStore/static/css/main.a3d78170.css",
+    "main.js": "/GamingStore/static/js/main.f5f0e739.js",
+    "static/media/fornite.jpg": "/GamingStore/static/media/fornite.05dd851576c76b1a2a74.jpg",
+    "static/media/mariorealpro.webp": "/GamingStore/static/media/mariorealpro.28760aef08b17bba82b3.webp",
+    "static/media/bowser.png": "/GamingStore/static/media/bowser.7b7900bd4447f56b56ec.png",
+    "static/media/spyro.jpg": "/GamingStore/static/media/spyro.d3f307ddf904b087c489.jpg",
+    "static/media/marioodyssey.jpg": "/GamingStore/static/media/marioodyssey.79e2d3c0fcf451f22d8c.jpg",
+    "static/media/letsgopikachu.jpg": "/GamingStore/static/media/letsgopikachu.2d39da3b7d5eaa272dda.jpg",
+    "static/media/zeldamain.jpg": "/GamingStore/static/media/zeldamain.8c687e3a604d075ce73e.jpg",
+    "static/media/minecraft.jpg": "/GamingStore/static/media/minecraft.3d76cd5b61ea61272aeb.jpg",
+    "static/media/mario.jpg": "/GamingStore/static/media/mario.c96452a8aa2f816cdda2.jpg",
+    "static/media/lugimansion.jpg": "/GamingStore/static/media/lugimansion.576a877bfbfc833a24c6.jpg",
+    "static/media/fortniteCart.jpg": "/GamingStore/static/media/fortniteCart.c83c294020c34f7ad818.jpg",
+    "static/media/kirby2.png": "/GamingStore/static/media/kirby2.a22601128023ab138d68.png",
+    "static/media/waluigi.webp": "/GamingStore/static/media/waluigi.cdb5c546cd0130ff01bf.webp",
+    "static/media/search.png": "/GamingStore/static/media/search.f2d70afd1ebdca42594e.png",
+    "static/media/sonic.jpg": "/GamingStore/static/media/sonic.8d9ce28980a31026e557.jpg",
+    "index.html": "/GamingStore/index.html",
+    "main.a3d78170.css.map": "/GamingStore/static/css/main.a3d78170.css.map",
+    "main.f5f0e739.js.map": "/GamingStore/static/js/main.f5f0e739.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a3d78170.css",
+    "static/js/main.f5f0e739.js"
+  ]
+}
