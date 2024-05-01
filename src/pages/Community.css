@@ -1,0 +1,19 @@
+.community{
+    max-width: 80vw;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 16px;
+}
+
+
+.community img{
+    max-width: 40%;
+}
+
+@media screen and (max-width:1000px) {
+
+    .community{
+        max-width: 100%;
+    }
+    
+}

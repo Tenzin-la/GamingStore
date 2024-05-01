@@ -1,26 +1,28 @@
 .gamelist {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    transition: all 0.5s ease-in-out;
+    max-width: 100%;
 }
 
 .game-card {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    margin: 10px 10px 40px 0px;
+    margin: 0.8em 0.8em 3em 0;
     cursor: pointer;
     padding: 20px 0 0 10px;
+    zoom: 1;
     transition: 0.3s all ease-in-out 0.1s;
     border: 1px solid transparent;
-    
+    font-size: 1em;
+
 }
 
-.game-card:hover
-{
+.game-card:hover {
     border-radius: 10px;
     border: 1px solid white;
-    height: 80%;
     box-shadow: 1px 1px 8px white;
-    font-size: 14px;
+    zoom: 0.9;
 }
 
 .gamelist .game-card img {
@@ -34,9 +36,92 @@
 }
 
 input[type=radio] {
-         appearance: none;
-         padding: 8px;
-         background-color: gold;
-         border-radius:50%;
-         border: 2px solid gold ;
-      }
+    appearance: none;
+    padding: 8px;
+    background-color: gold;
+    border-radius: 50%;
+    border: 2px solid gold;
+}
+
+.gamelistUp
+{
+    transform: translateY(-500px);
+    opacity: 0;
+}
+
+.gamelist a 
+{
+    text-decoration: none;
+    color: #333333;
+}
+
+
+@media only screen and (max-width: 1280px) {
+    
+    .game-card{
+        font-size: 0.8em;
+    }
+
+    .game-card:hover{
+        height: 100%;
+    }
+
+
+}
+
+
+@media only screen and (max-width:1100px){
+
+    .game-card{
+        font-size: 0.6em;
+    }
+
+    input[type=radio] {
+        appearance: none;
+        padding: 4px;
+        background-color: gold;
+        border-radius: 50%;
+        border: 2px solid gold;
+    }
+
+    .gamelist .game-card input[type='radio'] {
+        margin: 10px 4px 12px 0;
+    }
+    
+    
+
+
+}
+
+
+@media only screen and (max-width:1000px) and (max-height:1180px) {
+
+    .gamelist {
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        font-size: 1.5em;
+        margin-left: 1em;
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+
+    .gamelist{
+        display: grid;
+        grid-template-columns: none;
+    }
+
+    .game-card{
+        border: 1px solid lightgrey;
+        border-radius: 8px;
+        min-width: 80%;
+        margin-right: 2em;
+    }
+
+    .game-card img{
+        margin-right: 10px;
+    }
+    
+}
+

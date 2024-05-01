@@ -1,0 +1,18 @@
+.feed{
+    max-width: 80vw;
+    background-color: #fff;
+    padding: 2em;
+}
+
+
+.feed img{
+    max-width: 80%;
+}
+
+@media screen and (max-width:1000px) {
+
+    .feed{
+        max-width: 100%;
+    }
+    
+}

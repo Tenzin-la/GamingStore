@@ -2,36 +2,38 @@ import './Home.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { PRODUCTS } from '../data/Product'
+import { Carousel } from 'react-responsive-carousel'
 
 
-//images
+// //images
 import mario from '../images/mario.jpg'
 import fornite from '../images/fornite.jpg'
 import Gamelist from '../components/Gamelist'
 import arrowup from '../images/arrowup.png'
-//images of gamelist
-import letsgopikachu from '../images/letsgopikachu.jpg'
-import luigi from '../images/lugimansion.jpg'
-import marioodyssey from '../images/marioodyssey.jpg'
-import minecraft from '../images/minecraft.jpg'
-import spyro from '../images/spyro.jpg'
-import zelda from '../images/zeldamain.jpg'
+import { useGlobalContext } from '../context/CartContext'
+
+
 
 
 export default function Home() {
 
+  const navigate = useNavigate();
+  const { filteredGames } = useGlobalContext();
 
-  const [games, setGames] = useState([
-    { name: 'Lengend of Zelda', type: 'Adventure', rating: 5, pic: zelda, price: 1999 },
-    { name: 'Spyro:Reignited', type: 'Platform', rating: 4, pic: spyro, price: 2499 },
-    { name: 'Mario Odyssey', type: 'Platform', rating: 4, pic: marioodyssey, price: 1999 },
-    { name: 'Minecraft', type: 'Adventure', rating: 5, pic: minecraft, price: 3499 },
-    { name: 'Luigis Mansion', type: 'Adventure', rating: 3, pic: luigi, price: 2399 },
-    { name: "Let's go Pikachu", type: 'Adventure', rating: 5, pic: letsgopikachu, price: 4999 },
 
-  ])
+  const [all, setAll] = useState(false)
+  const [carouselImage, setCarouselImage] = useState([{ pic: mario }, { pic: fornite }]);
 
-  var searchText='';
+  const handleNavigate = () => {
+    setTimeout(() => {
+
+      navigate('/showall')
+
+    }, 500);
+  }
+
 
   useEffect(() => {
     AOS.init({
@@ -42,35 +44,46 @@ export default function Home() {
 
   return (
     <div className="home">
-      <div className="hero">
+      <div className={`hero ${all ? 'heroUp' : ''}`}>
         <div className="img-1">
-          <img src={mario} alt="image not found" data-aos="zoom-in" />
+          <img src={mario} alt="not found" data-aos="zoom-in" />
 
         </div>
         <div className="img-2">
-          <img src={fornite} alt="image not found" data-aos="zoom-in" />
+          <img src={fornite} alt="not found" data-aos="zoom-in" />
 
         </div>
+        {/* mobile carousel  */}
+
+
+        <div className='poster-Image' >
+          
+              <img src={carouselImage[1].pic} alt="not found" key={carouselImage[1].pic} />
+           
+
+        </div>
+
+
+
+
       </div>
 
       <div className="top-trending">
-        <div className="heading">
+        <div className={`heading ${all ? 'disp' : ''}`}>
           <div className="left" data-aos="fade-up">
             <big>Top Trending</big>
           </div>
           <div className="right" data-aos="fade-up">
-            <big>Show all <img src={arrowup} alt="image not found" /></big>
+            <Link onClick={handleNavigate}><big onClick={() => { if (all) { setAll(false) } else { setAll(true) } }}>Show all <img src={arrowup} alt="not found" /></big></Link>
           </div>
         </div>
         <div className="game-lists" data-aos="fade-up">
-          <Gamelist setSearchText={searchText}  games={games.filter((game) => game.name.toLocaleLowerCase().includes(searchText))} />
+
+          {PRODUCTS && <Gamelist games={filteredGames} all={all} />}
         </div>
       </div>
 
-
-
-
-
+      <img src={carouselImage[1].img} alt="" />
 
     </div>
   )

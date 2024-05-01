@@ -1,166 +1,143 @@
-
-
-.cart-content
-{
+.cart-content {
     height: 100vh;
-    width: 100%;
+    min-width: 100%;
     backdrop-filter: blur(5px);
     color: #fff;
     position: absolute;
     right: 0;
     top: 0;
-    padding: 2em;
 }
 
-.cart-content .cart-list img
-{
-    height:7em;
+.cart-content .cart-list img {
+    height: 7em;
     width: 6em;
     border: 3px solid #fff;
     border-radius: 20px;
-     
+
 }
 
-.cart-list
-{
+.cart-list {
     height: 90vh;
-    width: 35%;
+    min-width: 35%;
     position: absolute;
     right: 1%;
     top: 4%;
     background-color: slateblue;
     border-radius: 20px;
     padding: 10px 40px 20px;
+    overflow: scroll;
 
 }
 
-.cart-list .cross
-{
+.cart-list .cross {
     position: relative;
     left: 100%;
     top: 0;
     margin-bottom: 10px;
     cursor: pointer;
+    width: 20px;
 
 }
 
-.cart-list .cross:hover
-{
+.cart-list .cross:hover {
     color: crimson;
     opacity: 0.5;
 }
 
-.cart-header
-{
+.cart-header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
 }
 
-.cart-header .item-number
-{
+.cart-header .item-number {
     opacity: 0.8;
 }
 
-.cart-content .cart-box-content
-{
-    display: flex;
+.cart-content .cart-box-content {
+    display: grid;
+    grid-template-columns: 1fr  1fr;
 }
 
-.cart-content .cart-box
-{
+.cart-content .cart-box {
     display: flex;
     justify-content: space-between;
 
 }
 
-.cart-box-value
-{
+.cart-box-value {
     margin: 10px 20px;
 }
 
-.cart-list h3
-{
+.cart-list h3 {
     font-weight: 500;
 }
 
-.cart-box-value button 
-{
+.cart-box-value button {
     margin-top: 20px;
-    color: #e3e3e3;
+    color: lightcoral;
     border: none;
     background: transparent;
     cursor: pointer;
     font-size: 14px;
 }
 
-.cart-box-value button:hover
-{
-    color: #fff;
+.cart-box-value button:hover {
+    color: crimson;
 }
 
-.cart-box-price
-{
+.cart-box-price {
     margin: 10px 0;
 }
 
-.cart-box-price button
-{
+.cart-box-price button {
     border: none;
     background-color: rgb(91, 66, 230);
     padding: 4px 10px;
     color: #fff;
     margin: 20px 0;
     cursor: pointer;
-    
+
 }
 
-.cart-box-price button:hover
-{
+.cart-box-price button:hover {
     opacity: 0.8;
 }
 
-.cart-box-price .minus
-{
-    border-radius:10px 0 0 10px;
+.cart-box-price .minus {
+    border-radius: 10px 0 0 10px;
     border-right: 1px solid slateblue;
 }
 
-.cart-box-price .plus
-{
-    border-radius:0 10px  10px 0;
+.cart-box-price .plus {
+    border-radius: 0 10px 10px 0;
     border-left: 1px solid slateblue;
 }
 
-.cart-box-price .plus:focus, .minus:focus
-{
-    padding: 3px 9px;
 
-}
 
-.cart-box
-{
+.cart-box {
     margin: 20px 0 40px 0;
 }
 
-.totalPrice, .subTotal, .taxes
-{
+.totalPrice,
+.subTotal,
+.taxes {
     display: flex;
     justify-content: space-between;
     margin-right: 10px;
     margin-bottom: 20px;
 }
 
-.subTotal, .taxes
-{
+.subTotal,
+.taxes {
     color: lightgrey;
 }
 
-.completeOrder
-{
+.completeOrder {
     color: #444;
     width: 100%;
-    height:50px;
+    height: 50px;
     border-radius: 20px;
     border: none;
     font-weight: bold;
@@ -168,8 +145,69 @@
     cursor: pointer;
 }
 
-.completeOrder:hover
-{
+.completeOrder:hover {
     color: black;
     background-color: #fff;
+}
+
+
+@media only screen and (min-height:1000px) and (max-width:820px) {
+
+    .cart-list {
+        height: 90vh;
+        width: 60%;
+
+    }
+
+    .cart-content {
+        height: 120vh;
+        width: 123vw;
+        backdrop-filter: blur(5px);
+        color: #fff;
+        position: absolute;
+        right: -23%;
+        top: 0;
+    }
+
+}
+
+.empty-cart-header{
+    color:#fff;
+    font-size: 3em;
+}
+
+.empty-cart{
+    font-size: xx-large;
+    display: block;
+    margin: 3em auto;
+}
+
+
+
+
+@media only screen and (min-height:600px) and (max-width:1024px){
+
+    .cart-list {
+        height: 90vh;
+        min-width: 50%;
+        font-size: 0.8em;
+
+    }
+
+    .cart-box{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    .cart-list{
+        margin-right: 0;
+    }
+
+    .cart-content .cart-box {
+        display: grid;
+    
+    }
+    
 }

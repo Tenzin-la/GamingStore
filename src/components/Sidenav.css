@@ -1,6 +1,6 @@
 .sidenav {
-    
-    width: 200px;
+
+    width: 13em;
     transition: 0.3s all ease-in-out;
     height: 100vh;
     padding-top: 28px;
@@ -12,7 +12,7 @@
 
 
 .sidenavClosed {
-    transition:  0.5s ease-in-out 0.1s;
+    transition: 0.5s ease-in-out 0.1s;
     width: 80px;
     display: flex;
     flex-direction: column;
@@ -24,8 +24,7 @@
     box-shadow: 1px 1px 10px #fff;
 }
 
-.person
-{
+.person {
     margin: 0px 20px 20px 0;
     display: flex;
     color: #fff;
@@ -34,18 +33,15 @@
     position: relative;
 }
 
-.person p
-{
-    margin:10px;
+.person p {
+    margin: 10px;
 }
 
-.person-1
-{
+.person-1 {
     background-color: cornflowerblue;
 }
 
-.status
-{
+.status {
     position: absolute;
     height: 14px;
     width: 14px;
@@ -56,49 +52,41 @@
     border: 2px solid #fff;
 }
 
-.status-4
-{
+.status-4 {
     background-color: orange;
 }
 
-.status-5
-{
+.status-5 {
     background-color: grey;
 }
 
 
 
 
-.person-2
-{
+.person-2 {
     background-color: crimson;
 }
 
-.person-3
-{
+.person-3 {
     background-color: darkorchid;
 }
 
-.person-4
-{
+.person-4 {
     background-color: pink;
 }
 
-.person-5
-{
+.person-5 {
     background-color: orange;
 }
 
 
-.person p
-{
+.person p {
     margin-left: 6px;
-    
+
 }
 
 
-.sidebar-pic
-{
+.sidebar-pic {
     height: 60px;
     width: 50px;
     border-radius: 12px;
@@ -106,8 +94,7 @@
 
 
 
-.sidenav-button 
-{
+.sidenav-button {
     position: absolute;
     bottom: 5%;
     height: 50px;
@@ -118,8 +105,7 @@
     justify-content: center;
 }
 
-.sidenav-button button 
-{
+.sidenav-button button {
     border: none;
     background-color: #fff;
     cursor: pointer;
@@ -127,22 +113,55 @@
 
 }
 
-.sidenav-button img
-{
+.sidenav-button img {
     height: 30px;
-    width:50px;
+    width: 50px;
     transition: 0.3s all ease-in-out 0.1s;
- 
+
 }
 
-.rotate
-{
+.rotate {
     transform: rotate(180deg);
 }
 
-.topic
-{
+.topic {
     position: absolute;
     top: 20px;
     left: 10px;
+}
+
+
+@media only screen and (max-width:1200px) {
+
+    .sidenav-button {
+        top: 4em;
+    }
+
+    .sidebar-pic {
+        height: 50px;
+        width: 40px;
+        border-radius: 12px;
+    }
+
+    .sidenav {
+        font-size: 0.8em;
+        height: 50vh;
+    }
+
+    .sidenavClosed {
+        font-size: 0.8em;
+        height: 50vh;
+
+    }
+
+    
+
+}
+
+@media only screen and (min-height:600px) and (max-width:1024px){
+
+    .sidenavClosed{
+        height: 90vh;
+    }
+
 }
