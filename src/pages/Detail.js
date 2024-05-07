@@ -1,5 +1,5 @@
 import './details.css'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { useState, useEffect} from 'react'
 
 
@@ -20,6 +20,15 @@ export default function Detail() {
 
   const { addToCart, cartCount } = useGlobalContext();
 
+  const navigate = useNavigate();
+
+  const handleBuy = (num) =>{
+
+    addToCart(num);
+    navigate('/');
+
+  }
+
 
   // useEffect(() => {
 
@@ -30,6 +39,8 @@ export default function Detail() {
   // }, [id, games])
 
   // console.log(games);
+
+  
 
 
 
@@ -68,7 +79,7 @@ export default function Detail() {
 
             </div>
             <div className="buttons" data-aos='flip-up' data-aos-duration='2000'>
-              <button className="buy">Buy Now</button>
+              <button className="buy" onClick={() =>handleBuy(games[id-1].id)}>Buy Now</button>
               <button className="cart" onClick={() => addToCart(games[id-1].id)}>Add to Cart {cartCount[games[id-1].id] > 0 && <>  {cartCount[games[id-1].id]}</>}</button>
               <button className="wishlist">Add to wishlist</button>
             </div>

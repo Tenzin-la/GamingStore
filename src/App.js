@@ -35,7 +35,7 @@ function App() {
         <div className="right-content">
           <Navbar setCartOpen={setCartOpen} />
           <Routes>
-            <Route path='/' element={<Home />} />
+            <Route exact path='/' element={<Home />} />
             <Route path='/feed' element={<Feed />} />
             <Route path='/community' element={<Community />} />
             <Route path='/login' element={<Login />} />

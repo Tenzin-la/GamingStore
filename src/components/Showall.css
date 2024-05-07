@@ -71,6 +71,7 @@ big {
 .showall-right {
     padding: 14px 20px 0 0;
     border-right: 3px solid white;
+    overflow: hidden;
 }
 
 .showall-buttons img {
@@ -90,6 +91,11 @@ big {
 
 .showall-buttons img:hover {
     opacity: 1;
+}
+
+.showall a{
+    text-decoration: none;
+    color: black;
 }
 
 @media only screen and (min-height:1000px) and (max-width:820px) {
@@ -139,5 +145,17 @@ big {
     }
 
 
+
+}
+
+
+@media screen and (max-width:670px){
+
+    .showall-card{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        min-height: fit-content;
+    }
 
 }

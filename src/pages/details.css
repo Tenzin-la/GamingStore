@@ -68,7 +68,6 @@ h1 {
     display: grid;
     grid-template-rows: 1fr 2fr;
     height: 50vh;
-    overflow: hidden;
 }
 
 

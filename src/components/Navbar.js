@@ -10,6 +10,8 @@ export default function Navbar({ setCartOpen }) {
 
     const [openSignup, setOpenSignup] = useState(false)
     const { setSearchText } = useGlobalContext();
+    const [barContent, setBarContent] = useState(false);
+    const [barFit, setBarFit] = useState('');
 
 
 
@@ -21,6 +23,9 @@ export default function Navbar({ setCartOpen }) {
             setOpenSignup(true)
 
     }
+
+    console.log(barFit);
+
 
 
     return (
@@ -85,7 +90,17 @@ export default function Navbar({ setCartOpen }) {
 
                 <div className="mobile-nav-right">
                     <button className="mobile-nav-right-cart" onClick={() => { setCartOpen((prev) => !prev) }}><img src={cart} /></button>
-                    <button><FaBars className='mobile-bar'/></button>
+                    <button onClick={() => { { setBarContent((prev) => !prev) } }}><FaBars className='mobile-bar' /></button>
+
+                    {barContent && <div className='mobile-nav-content' data-aos='fade-left'>
+                        <ul>
+                            <li><NavLink to='/feed' onClick={()=> setBarContent(false)}>Feed</NavLink></li>
+                            <li><NavLink to='/'>Store</NavLink></li>
+                            <li><NavLink to='/community'>Community</NavLink></li>
+
+                        </ul>
+                        <span className="close" onClick={() => setBarContent(false)}>X</span>
+                    </div>}
 
 
 

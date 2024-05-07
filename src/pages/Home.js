@@ -4,7 +4,6 @@ import 'aos/dist/aos.css'
 import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { PRODUCTS } from '../data/Product'
-import { Carousel } from 'react-responsive-carousel'
 
 
 // //images
